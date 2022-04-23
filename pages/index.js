@@ -18,7 +18,7 @@ export default function Home() {
 
     if (!term) return;
 
-    router.push(`/search?$term=${term}`);
+    router.push(`/search?term=${term}`);
   };
   return (
     <div className='flex flex-col justify-center h-screen'>
