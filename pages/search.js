@@ -12,7 +12,7 @@ function Search({ results }) {
   const router = useRouter();
   console.log(results);
   return (
-    <div>
+    <div className='ml-3'>
       <Head>
         <title>{router.query.term} - Google Search</title>
         <link rel='icon' href='/favicon.ico' />
@@ -41,16 +41,4 @@ export async function getServerSideProps(context) {
       results: data,
     },
   };
-
-  // const data = useDummyData
-  //   ? Response
-  //   : await fetch(
-  //       `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}`
-  //     ).then((response) => response.json());
-
-  // return {
-  //   props: {
-  //     results: data,
-  //   },
-  // };
 }
